@@ -1,5 +1,5 @@
 
-function is_weixn(){
+function is_weixin(){
     var ua = navigator.userAgent.toLowerCase();
     var iswexin = ua.match(/MicroMessenger/i)=="micromessenger";
     console.log("agent:",ua);
@@ -8,8 +8,8 @@ function is_weixn(){
        window.location.href='/weixin';
        return; 
     }else{
-        
+        window.location.href='/';
     }
 }
 
-is_weixn()
+is_weixin()

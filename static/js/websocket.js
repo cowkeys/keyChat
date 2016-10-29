@@ -83,17 +83,19 @@ $(document).ready(function () {
           //alert($('#chatbox').scrollTop(300));
         
     }
-    
+    var u = navigator.userAgent
+    var ismobile =  !!u.match(/AppleWebKit.*Mobile.*/) //是否为移动终端    
+    console.log("ismobile:",ismobile);
     $('#sendbtn').click(function () {
         var chattext = $('#sendbox').val().trim();
         if ($('#sendbox').val() != "" && chattext.length <100 ){
             postConecnt();
         }
-        $( "#sendbox" ).focus();
+        if (!ismobile) {
+                $( "#sendbox" ).focus();
+            }  
     });
-    var u = navigator.userAgent
-    var ismobile =  !!u.match(/AppleWebKit.*Mobile.*/) //是否为移动终端    
-    console.log("ismobile:",ismobile);
+    
     document.onkeydown=keyListener;   
     function keyListener(e){    
         if(e.keyCode == 13){ 
