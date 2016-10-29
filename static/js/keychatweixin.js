@@ -4,11 +4,8 @@ function is_weixin(){
     var iswexin = ua.match(/MicroMessenger/i)=="micromessenger";
     console.log("agent:",ua);
     console.log("iswexin:",iswexin);
-    if(iswexin) {
-       window.location.href='/weixin';
-       return; 
-    }else{
-        window.location.href='/';
+    if(!iswexin) {
+       window.location.href='/';
     }
 }
 
