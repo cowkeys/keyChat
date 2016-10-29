@@ -91,18 +91,21 @@ $(document).ready(function () {
         }
         $( "#sendbox" ).focus();
     });
+    var u = navigator.userAgent
+    var ismobile =  !!u.match(/AppleWebKit.*Mobile.*/) //是否为移动终端    
+    console.log("ismobile:",ismobile);
+    document.onkeydown=keyListener;   
+    function keyListener(e){    
+        if(e.keyCode == 13){ 
+            if (!ismobile) {
+                $( "#sendbox" ).focus();
+            }  
+            var chattext = $('#sendbox').val()
+            if ($('#sendbox').val() != "" && chattext.length <100 ){
+                postConecnt();
+            }
+            
 
-document.onkeydown=keyListener;   
-            function keyListener(e){   
-                //  当按下回车键，执行我们的代码  
-                if(e.keyCode == 13){   
-                  var chattext = $('#sendbox').val()
-        if ($('#sendbox').val() != "" && chattext.length <100 ){
-            postConecnt();
-        }
-        $( "#sendbox" ).focus();
-                }   
-  
-            }   
-
+        }   
+    }   
 });

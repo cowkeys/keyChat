@@ -31,6 +31,7 @@ func main() {
 
 	// Register routers.
 	beego.Router("/", &controllers.AppController{})
+	beego.Router("/weixin", &controllers.AppController{}, "*:GetWeixin")
 	// Indicate AppController.Join method to handle POST requests.
 	beego.Router("/join", &controllers.AppController{}, "post:Join")
 

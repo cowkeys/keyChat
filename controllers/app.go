@@ -74,6 +74,10 @@ type AppController struct {
 	baseController // Embed to use methods that are implemented in baseController.
 }
 
+func (this *AppController) GetWeixin() {
+	this.TplName = "weixin.html"
+}
+
 // Get implemented Get() method for AppController.
 func (this *AppController) Get() {
 	this.TplName = "welcome.html"
