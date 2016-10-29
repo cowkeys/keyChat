@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Unknown" />
+<meta name="description" content="Beego chat app " />
+<meta name="keywords" content="Go, golang, beego, cowkeys">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+{{if .IsLongPolling}}
+<script src="/static/js/longpolling.js"></script>
+{{end}}
+{{if .IsWebSocket}}
+<script src="/static/js/websocket.js"></script>
+{{end}}

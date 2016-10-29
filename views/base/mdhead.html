@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="/static/img/favicon.png?a=a" />
+<meta name="author" content="Unknown" />
+<meta name="description" content="Beego sample app - Web IM" />
+<meta name="keywords" content="Go, golang, beego, sample, Web IM">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+
+<link rel="stylesheet" href="/static/mdl/material.min.css">
+<link rel="stylesheet" href="/static/css/keyChat.css" >
+<script src="/static/mdl/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script src="/static/js/jquery-1.10.1.min.js"></script>
+
+{{if .IsLongPolling}}
+<script src="/static/js/longpolling.js"></script>
+{{end}}
+{{if .IsWebSocket}}
+<script src="/static/js/websocket.js"></script>
+{{end}}
